@@ -7,6 +7,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  json_store: ^1.1.0
   flutter:
     sdk: flutter
   getwidget: ^1.1.0
@@ -58,6 +59,7 @@ flutter:
     - lib/assets/images/avatar12.png
     - lib/assets/gif/success1.gif
     - lib/assets/icons/gflogo.png
+    - lib/assets/images/logo.png
 
   fonts:
     - family: GFFontIcons
