@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:openemr_app/screens/ppg/heartRate.dart';
+import 'package:openemr_app/screens/telehealth/telehealth.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
 import '../screens/appbar/app_home.dart';
@@ -33,6 +35,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List gfComponents = [
+    {
+      'icon': const IconData(
+        0xe901,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'PPG',
+      'route': PPG()
+    },
+    {
+      'icon': const IconData(
+        0xe901,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Telehealth',
+      'route': Telehealth()
+    },
     {
       'icon': const IconData(
         0xe904,
