@@ -31,6 +31,9 @@ import '../screens/typography/typography.dart';
 import '../screens/checkbox/checkboxs.dart';
 import '../screens/checkboxlisttile/checkbox_list_tile_page.dart';
 import '../screens/radiobutton/radio_buttons.dart';
+import '../screens/login.dart';
+import 'package:json_store/json_store.dart';
+import '../utils/store.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -63,13 +66,14 @@ class _HomePageState extends State<HomePage> {
       'title': 'Chats',
       'route': Chat()
     },
-     {
+    {
       'icon': const IconData(
         0xe901,
         fontFamily: 'GFFontIcons',
       ),
       'title': 'Patient List',
-      'route': PatientListPage()
+      'route': PatientListPage(),
+      'authentication': true
     },
     {
       'icon': const IconData(
@@ -295,7 +299,18 @@ class _HomePageState extends State<HomePage> {
                       mainAxisSpacing: 20),
                   itemBuilder: (BuildContext context, int index) =>
                       GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            if (gfComponents[index]['authentication']) {
+                              Store store;
+                              dynamic username =
+                                  store._getStateStore('username');
+                              if (username) {
+                                // set gfConponents route as patientlist
+                              } else {
+                                // set gfComponent as login route
+                              }
+                            }
+                          },
                           child: buildSquareTile(
                               gfComponents[index]['title'],
                               gfComponents[index]['icon'],
