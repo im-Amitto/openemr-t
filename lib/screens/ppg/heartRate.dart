@@ -4,6 +4,8 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:wakelock/wakelock.dart';
 import 'chart.dart';
+import 'package:getwidget/getwidget.dart';
+import 'package:flutter/cupertino.dart';
 
 class PPG extends StatefulWidget {
   @override
@@ -55,6 +57,24 @@ class PPGView extends State<PPG> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: GFAppBar(
+        backgroundColor: GFColors.DARK,
+        leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              child: Icon(
+                CupertinoIcons.back,
+                color: GFColors.SUCCESS,
+              ),
+            )),
+        title: const Text(
+          'Heart-rate Monitor',
+          style: TextStyle(fontSize: 17),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: Column(
           children: <Widget>[

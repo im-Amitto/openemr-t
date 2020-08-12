@@ -84,38 +84,38 @@ class _ShimmerPageState extends State<ShimmerPage> {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
-          child: GFTypography(
-            text: 'Shimmer Effect on Text',
-            type: GFTypographyType.typo5,
-            dividerWidth: 25,
-            dividerColor: Color(0xFF19CA4B),
-          ),
-        ),
-        GFShimmer(
-          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const Text(
-              'Hurray!! Order Placed',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-            ),
-            const SizedBox(width: 5),
-            Icon(Icons.sentiment_very_satisfied),
-          ]),
-          direction: GFShimmerDirection.rightToLeft,
-          showGradient: true,
-          gradient: LinearGradient(
-            begin: Alignment.bottomRight,
-            end: Alignment.centerLeft,
-            stops: const <double>[0, 0.3, 0.6, 0.9, 1],
-            colors: const [
-              GFColors.DANGER,
-              GFColors.PRIMARY,
-              GFColors.WARNING,
-              GFColors.SECONDARY,
-              Colors.red,
-            ],
-          ),
-        ),
+        // const Padding(
+        //   padding: EdgeInsets.only(left: 15, top: 30, bottom: 20),
+        //   child: GFTypography(
+        //     text: 'Shimmer Effect on Text',
+        //     type: GFTypographyType.typo5,
+        //     dividerWidth: 25,
+        //     dividerColor: Color(0xFF19CA4B),
+        //   ),
+        // ),
+        // GFShimmer(
+        //   child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+        //     const Text(
+        //       'Hurray!! Order Placed',
+        //       style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+        //     ),
+        //     const SizedBox(width: 5),
+        //     Icon(Icons.sentiment_very_satisfied),
+        //   ]),
+        //   direction: GFShimmerDirection.rightToLeft,
+        //   showGradient: true,
+        //   gradient: LinearGradient(
+        //     begin: Alignment.bottomRight,
+        //     end: Alignment.centerLeft,
+        //     stops: const <double>[0, 0.3, 0.6, 0.9, 1],
+        //     colors: const [
+        //       GFColors.DANGER,
+        //       GFColors.PRIMARY,
+        //       GFColors.WARNING,
+        //       GFColors.SECONDARY,
+        //       Colors.red,
+        //     ],
+        //   ),
+        // ),
       ]));
 }
