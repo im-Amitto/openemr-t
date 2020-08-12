@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:openemr_app/screens/patientList/patient_list.dart';
 import 'package:openemr_app/screens/ppg/heartRate.dart';
+import 'package:openemr_app/screens/telehealth/chat.dart';
 import 'package:openemr_app/screens/telehealth/telehealth.dart';
 import '../screens/accordian/accordian.dart';
 import '../screens/alert/alert.dart';
@@ -50,6 +52,22 @@ class _HomePageState extends State<HomePage> {
       ),
       'title': 'Telehealth',
       'route': Telehealth()
+    },
+    {
+      'icon': const IconData(
+        0xe901,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Chats',
+      'route': Chat()
+    },
+     {
+      'icon': const IconData(
+        0xe901,
+        fontFamily: 'GFFontIcons',
+      ),
+      'title': 'Patient List',
+      'route': PatientListPage()
     },
     {
       'icon': const IconData(
